@@ -28,10 +28,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
+
       - name: Build and push
-        id: docker_build
         uses: docker/build-push-action@v5
         with:
-          push: false
+          push: true
           tags: igoorj/fc2.0-ci-go
